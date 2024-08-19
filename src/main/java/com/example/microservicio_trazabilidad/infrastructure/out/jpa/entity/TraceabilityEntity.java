@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDateTime;
+
 @Document(collection = "traceability")
 @Data
 @NoArgsConstructor
@@ -22,6 +24,8 @@ public class TraceabilityEntity {
     private Long customerId;
     @Field
     private String customerEmail;
+    @Field
+    private LocalDateTime date;
     @Field
     private String previousStatus;
     @Field
